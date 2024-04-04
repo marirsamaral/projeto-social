@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
 *{
-    margin: ;
+    margin:0px ; /*usado para usar 100% da tela*/
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 html, body {
@@ -10,7 +12,49 @@ html, body {
     background-color: black;
 }
 
+body {
+    background: url(imagens/fundo-madeira.jpg) no-repeat top center;
+    background-size: cover; /*para a imagem cobrir a tela inteira*/
+    background-attachment: fixed; /*para que não crie uma barra de rolagem*/
+}
+
 main {
     height: 100vh;
     position: relative;
+}
+
+section#telefone { /*configuração para deixar a imagem do celular no meio da tela*/
+    height: 627px; /*as medidas de altura e largura foram de acordo com o tamanho da imagem*/
+    width: 311px;
+    background: url(imagens/frame-iphone.png) ; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*para que o retangulo onde vai ficar o telefone fique no centro da tela*/
+}
+
+iframe#tela {
+    position: relative;
+    top: 80px;
+    left: 22px;
+    height: 467px;
+    width: 265px;
+    
+}
+
+section#social img { /*configuração para as imagens dentro do section */
+    width: 50px;
+    margin: 10px; /*para as logos ficarem separadas*/
+    border-radius: 50%; /*para que as logos fiquem redondas*/
+    border: 2px 2px 5px black; /*sombra*/
+    box-sizing: border-box; /*para a sombra acompanhar a logo quando passar o mouse*/
+}
+
+section#social {
+    text-align: right; /*mudar as logos de lado*/
+}
+
+section#social img:hover {
+    border: 2px solid white; /*quando passar o mouse ter uma sombra branca*/
+    transform: translate(-5px,-5px); /*quando passar o mouse ele tem a animação*/
 }
